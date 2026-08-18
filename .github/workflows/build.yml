@@ -18,7 +18,7 @@ jobs:
       - name: init
         run: |
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.SALTOSYSTEMS_BOT_GITHUB_TOKEN }}" >> .npmrc
-          echo "@saltoapis:registry=https://npm.pkg.github.com/saltoapis" >> .npmrc
+          echo "@saltoapis:registry=https://npm.pkg.github.com/jannis6023" >> .npmrc
           docker build -f Dockerfile.build -t saltoapis-es .
           docker run --rm -i -d --name saltoapis-es saltoapis-es
       - name: prepare
